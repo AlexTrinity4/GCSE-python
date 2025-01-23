@@ -1,0 +1,11 @@
+number1 = int(input("Enter a number"))
+number2 = 0
+total = number1 + number2
+answer = "y"
+while "y" in answer:
+    number2 = int(input("Enter another number"))
+    total = total + number2
+    answer = input("Do you want to enter another number? y/n")
+
+print("The total is" , total)    
+        
