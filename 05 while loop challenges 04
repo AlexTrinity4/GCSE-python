@@ -1,0 +1,13 @@
+answer = "y"
+people = 0
+while "y" in answer:
+    name = input("Who do you want to invite to the party?")
+    print(name , "has been invited")
+    people = people + 1
+    answer = input("Do you want to invite someone else? y/n")
+
+print(people , "people have been invited")    
+    
+    
+    
+    
