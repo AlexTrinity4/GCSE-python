@@ -1,0 +1,9 @@
+num_people = int(input("How many people do you want to invite to your party? ")) 
+if num_people < 3:
+    print("You have no friends")
+if num_people < 10: 
+    for i in range(num_people): 
+        name = input("Enter a name: ") 
+        print(name + " has been invited.") 
+else: 
+    print("Too many people.")
