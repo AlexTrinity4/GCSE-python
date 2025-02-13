@@ -1,0 +1,10 @@
+total = 0 
+choice = "y" 
+for i in range(5): 
+  num = int(input("Enter a number: ")) 
+  choice = input("Do you want this number included? (y/n) ") 
+  if "y" in choice: 
+    total = total + num 
+  else: 
+    total = total 
+print(total) 
