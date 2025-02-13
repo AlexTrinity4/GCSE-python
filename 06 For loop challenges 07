@@ -1,0 +1,11 @@
+choice = input("Would you like to count up or down?")
+if "up" in choice: 
+  top = int(input("What is the top number?"))
+  for i in range (1, top + 1, 1): 
+    print(i)
+if "down" in choice: 
+  num = int(input("Enter a number below 20"))
+  for i in range(20, num + 1, -1): 
+    print(i)
+else:
+    print("I don't understand")
