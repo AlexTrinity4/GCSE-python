@@ -1,0 +1,7 @@
+rhyme = input("Enter the first line of a nursery rhyme: ") 
+length = len(rhyme) 
+print("This has" , length , "letters in it") 
+start = int(input("Enter a starting number: ")) 
+end = int(input("Enter an end number: ")) 
+section = rhyme[start:end] 
+print(section) 
