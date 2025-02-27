@@ -1,0 +1,14 @@
+num1= int(input("Enter first number"))
+num2 = int(input("Enter second number"))
+choice = input("What would you like to do?")
+def start():
+    if "add" in choice:
+        total = num1 + num2
+    if "subtract" in choice:
+        total = num1 - num2
+    if "multiply" in choice:
+        total = num1 * num2
+    if "divide" in choice:
+        total = num1 / num2
+    print(total)
+start()
