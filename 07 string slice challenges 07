@@ -1,0 +1,4 @@
+name = input("Enter your first name: ")
+if name[0:1].lower() in "aeiou":
+    name = name[1:]
+print(name)
