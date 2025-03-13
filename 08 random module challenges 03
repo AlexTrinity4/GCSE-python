@@ -1,0 +1,8 @@
+import random
+list = ["h", "t"]
+coin = random.choice(list)
+guess = input("Guess t / h ")
+if guess == list:
+    print("You win")
+else:
+    print("Bad luck")
