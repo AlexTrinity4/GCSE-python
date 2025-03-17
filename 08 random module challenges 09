@@ -1,0 +1,22 @@
+import random
+colours = ["red", "yellow", "green", "blue", "orange"]
+print(colours)
+answer = random.choice(colours)
+guess = input("Guess what colour I am thinking of ")
+if guess != answer:
+    if answer == "red":
+        print("That apple is very RED")
+    if answer == "yellow":
+        print("That banana is very YELLOW")
+    if answer == "green":
+        print("I bet you are GREEN with envy")
+    if answer == "blue":
+        print("I bet you are feeling BLUE")
+    if answer == "orange":
+        print("That ORANGE is very ORANGE")
+    guess2 = input("Try again ")
+    
+if guess == answer:
+    print("Correct")
+if guess2 == answer:
+    print("Correct")
