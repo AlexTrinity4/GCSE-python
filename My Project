@@ -2,7 +2,7 @@
 import random
 import time as t
 game = True
-difficulty = input("What difficulty would you like to play? (easy, medium, hard, impossible ")
+difficulty = input("What difficulty would you like to play? easy, medium, hard, impossible ")
 
 if difficulty == "easy":
     words = ["cat", "dog", "sun", "car", "hat", "bed", "pen", "box", "fan", "map", "key", "rug", "jar", "cup", "toy", "log", "ink", "web", "fog", "sky"]
@@ -22,98 +22,6 @@ print(guessing)
 lives = 10
 
 
-
-    #if incorrect    
-    if guess not in answer:
-
-        incorrect.append(guess)
-        print(incorrect)
-        lives = lives - 1
-
-    if lives == 9:
-
-        print("__________")
-    if lives == 8:
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|__________")
-    if lives == 7:
-        print("_________")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|__________")
-    if lives == 6:
-        print("_________")
-        print("|       |")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|__________")
-    if lives == 5:
-        print("_________")
-        print("|       |")
-        print("|       0")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|__________")
-    if lives == 4:
-        print("_________")
-        print("|       |")
-        print("|       0")
-        print("|       |")
-        print("|")
-        print("|")
-        print("|")
-        print("|__________")
-    if lives == 3:
-        print("_________")
-        print("|       |")
-        print("|       0")
-        print("|       |")
-        print("|      / ")
-        print("|")
-        print("|")
-        print("|__________")
-    if lives == 2:
-        print("_________")
-        print("|       |")
-        print("|       0")
-        print("|       |")
-        print("|      / \ ")
-        print("|")
-        print("|")
-        print("|__________")
-    if lives == 1:
-        print("_________")
-        print("|       |")
-        print("|       0")
-        print("|       |\ ")
-        print("|      / \ ")
-        print("|")
-        print("|")
-        print("|__________")
-
-    if lives == 0:
-        print("_________")
-        print("|       |")
-        print("|       0")
-        print("|      /|\ ")
-        print("|      / \ ")
-        print("|")
-        print("|")
-        print("|__________")
 
 while game == True:
 
@@ -205,6 +113,98 @@ while game == True:
         guessing = guessing[0:36] + guessing[36:37].replace(guessing[36:37], guess) + \
         guessing[37:]
     print("The word:" , guessing)
+    if guess not in answer:
+
+        incorrect.append(guess)
+        print(incorrect)
+        lives = lives - 1
+    
+    #if incorrect    
+
+    if lives == 9:
+
+        print("__________")
+    if lives == 8:
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 7:
+        print("_________")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 6:
+        print("_________")
+        print("|       |")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 5:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 4:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|       |")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 3:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|       |")
+        print("|      / ")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 2:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|       |")
+        print("|      / \ ")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 1:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|       |\ ")
+        print("|      / \ ")
+        print("|")
+        print("|")
+        print("|__________")
+
+    if lives == 0:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|      /|\ ")
+        print("|      / \ ")
+        print("|")
+        print("|")
+        print("|__________")
 
     #cheaters
     if guess == "":
