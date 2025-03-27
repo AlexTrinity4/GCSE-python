@@ -1,0 +1,249 @@
+#BIGGEST ANSWER 9 LETTERS
+import random
+import time as t
+game = True
+difficulty = input("What difficulty would you like to play? (easy, medium, hard, impossible ")
+
+if difficulty == "easy":
+    words = ["cat", "dog", "sun", "car", "hat", "bed", "pen", "box", "fan", "map", "key", "rug", "jar", "cup", "toy", "log", "ink", "web", "fog", "sky"]
+if difficulty == "medium":
+    words = ["about", "above", "after", "again", "alone", "along", "among", "angry", "around", "away", "basic", "being", "below", "black", "brown", "clean", "close", "dance", "early", "earth", "empty", "every", "final", "first", "found", "front", "green", "happy", "heavy", "light", "moral", "music", "night", "north", "ocean", "order", "other", "owner", "peace", "phone", "place", "plant", "power", "proof", "right", "round", "shall", "small", "sound", "south", "space", "speed", "stone", "still", "story", "study", "three", "today", "water", "white", "whole", "world", "write", "yellow"]
+if difficulty == "hard":
+    words = ["building", "evidence", "important", "different", "possible", "questions", "countries", "generally", "knowledge"]
+if difficulty == "impossible":
+    words = ["anthropomorphism", "counterproductive", "disproportionately", "electroencephalogram", "interdisciplinary", "misinterpretation", "overgeneralization", "phenomenologically", "psychophysiology", "subcompartmentalise", "cryptographically"]
+answer = random.choice(words)
+incorrect = []
+guess = " "
+answerlength = len(answer)
+correct = []
+guessing = len(answer) * "_ "
+print(guessing)
+lives = 10
+
+
+
+    #if incorrect    
+    if guess not in answer:
+
+        incorrect.append(guess)
+        print(incorrect)
+        lives = lives - 1
+
+    if lives == 9:
+
+        print("__________")
+    if lives == 8:
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 7:
+        print("_________")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 6:
+        print("_________")
+        print("|       |")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 5:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 4:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|       |")
+        print("|")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 3:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|       |")
+        print("|      / ")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 2:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|       |")
+        print("|      / \ ")
+        print("|")
+        print("|")
+        print("|__________")
+    if lives == 1:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|       |\ ")
+        print("|      / \ ")
+        print("|")
+        print("|")
+        print("|__________")
+
+    if lives == 0:
+        print("_________")
+        print("|       |")
+        print("|       0")
+        print("|      /|\ ")
+        print("|      / \ ")
+        print("|")
+        print("|")
+        print("|__________")
+
+while game == True:
+
+
+    guess = input("Enter a letter: ")
+    #letters 0:1
+    if guess in answer[0:1]:
+        correct.append(guess)
+        guessing = guessing[0:1].replace(guessing[0:1], guess) + guessing[1:]
+    #letters 1:2
+    if guess in answer[1:2]:
+        correct.append(guess)
+        guessing = guessing[0:2] + guessing[2:3].replace(guessing[2:3], guess) + \
+        guessing[3:]
+    #letters 2:3
+    if guess in answer[2:3]:
+        correct.append(guess)
+        guessing = guessing[0:4] + guessing[4:5].replace(guessing[4:5], guess) + \
+        guessing[5:]
+    #letters 3:4
+    if guess in answer[3:4]:
+        correct.append(guess)
+        guessing = guessing[0:6] + guessing[6:7].replace(guessing[6:7], guess) + \
+        guessing[7:]
+
+    #letters 4:5
+    if guess in answer[4:5]:
+        correct.append(guess)
+        guessing = guessing[0:8] + guessing[8:9].replace(guessing[8:9], guess) + \
+        guessing[9:]
+    #letters 5:6
+    if guess in answer[5:6]:
+        correct.append(guess)
+        guessing = guessing[0:10] + guessing[10:11].replace(guessing[10:11], guess) + \
+        guessing[11:]
+    #letters 6:7
+    if guess in answer[6:7]:
+        correct.append(guess)
+        guessing = guessing[0:12] + guessing[12:13].replace(guessing[12:13], guess) + \
+        guessing[13:]
+    #letters 7:8
+    if guess in answer[7:8]:
+        correct.append(guess)
+        guessing = guessing[0:14] + guessing[14:15].replace(guessing[14:15], guess) + \
+        guessing[15:]
+    #letters 8:9
+    if guess in answer[8:9]:
+        correct.append(guess)
+        guessing = guessing[0:16] + guessing[16:17].replace(guessing[16:17], guess) + \
+        guessing[17:]
+    if guess in answer[9:10]:
+        correct.append(guess)
+        guessing = guessing[0:18] + guessing[18:19].replace(guessing[18:19], guess) + \
+        guessing[19:]
+    if guess in answer[10:11]:
+        correct.append(guess)
+        guessing = guessing[0:20] + guessing[20:21].replace(guessing[20:21], guess) + \
+        guessing[21:]
+    if guess in answer[11:12]:
+        correct.append(guess)
+        guessing = guessing[0:22] + guessing[22:23].replace(guessing[22:23], guess) + \
+        guessing[23:]
+    if guess in answer[12:13]:
+        correct.append(guess)
+        guessing = guessing[0:24] + guessing[24:25].replace(guessing[24:25], guess) + \
+        guessing[25:]
+    if guess in answer[13:14]:
+        correct.append(guess)
+        guessing = guessing[0:26] + guessing[26:27].replace(guessing[26:27], guess) + \
+        guessing[27:]
+    if guess in answer[14:15]:
+        correct.append(guess)
+        guessing = guessing[0:28] + guessing[28:29].replace(guessing[28:29], guess) + \
+        guessing[29:]
+    if guess in answer[15:16]:
+        correct.append(guess)
+        guessing = guessing[0:30] + guessing[30:31].replace(guessing[30:31], guess) + \
+        guessing[31:]
+    if guess in answer[16:17]:
+        correct.append(guess)
+        guessing = guessing[0:32] + guessing[32:33].replace(guessing[32:33], guess) + \
+        guessing[33:]
+    if guess in answer[17:18]:
+        correct.append(guess)
+        guessing = guessing[0:34] + guessing[34:35].replace(guessing[34:35], guess) + \
+        guessing[35:]
+    if guess in answer[18:19]:
+        correct.append(guess)
+        guessing = guessing[0:36] + guessing[36:37].replace(guessing[36:37], guess) + \
+        guessing[37:]
+    print("The word:" , guessing)
+
+    #cheaters
+    if guess == "":
+        game = False
+        t.sleep(1)
+        print("Stop cheating. Game over")
+    if len(guess) == 0:
+        t.sleep(1)
+        print("Actually enter a letter next time stupid")
+
+    #game over
+    if lives == 0:
+        print("You lose")
+        print("The answer was " + answer)
+
+        print("███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀")
+        print("██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼█┼┼┼██┼██┼┼┼")
+        print("██┼┼┼▄▄▄┼██▄▄▄▄▄██┼██┼┼┼▀┼┼┼██┼██▀▀▀")
+        print("██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██┼┼┼")
+        print("███▄▄▄██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██▄▄▄")
+        print("┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼")
+        print("███▀▀▀███┼▀███┼┼██▀┼██▀▀▀┼██▀▀▀▀██▄┼")
+        print("██┼┼┼┼┼██┼┼┼██┼┼██┼┼██┼┼┼┼██┼┼┼┼┼██┼")
+        print("██┼┼┼┼┼██┼┼┼██┼┼██┼┼██▀▀▀┼██▄▄▄▄▄▀▀┼")
+        print("██┼┼┼┼┼██┼┼┼██┼┼█▀┼┼██┼┼┼┼██┼┼┼┼┼██┼")
+        print("███▄▄▄███┼┼┼─▀█▀┼┼─┼██▄▄▄┼██┼┼┼┼┼██▄")
+        print("┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼████▄┼┼┼▄▄▄▄▄▄▄┼┼┼▄████┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼┼▀▀█▄█████████▄█▀▀┼┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼┼┼┼█████████████┼┼┼┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼┼┼┼██▀▀▀███▀▀▀██┼┼┼┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼┼┼┼██┼┼┼███┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼┼┼┼█████▀▄▀█████┼┼┼┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼┼┼┼┼███████████┼┼┼┼┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼▄▄▄██┼┼█▀█▀█┼┼██▄▄▄┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼▀▀██┼┼┼┼┼┼┼┼┼┼┼██▀▀┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼")
+        print("┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼")
+        game = False
+    if "_" not in guessing:
+        print("You win")
