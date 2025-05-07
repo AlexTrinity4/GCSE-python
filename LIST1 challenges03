@@ -1,0 +1,17 @@
+list = []
+num = 0
+choice = True
+while choice == True:
+    name = input("Enter the name you would like to invite")
+    list.append(name)
+    num = num + 1
+    if num >= 3:
+        while choice == True:
+            choice2 = input("Would you like to add more people?")
+            if "no" in choice2:
+                choice = False
+                print(num)
+            if "yes" in choice2:
+                name = input("Enter the name you would like to invite")
+                list.append(name)
+                num = num + 1
