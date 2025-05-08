@@ -1,0 +1,6 @@
+list = [1, 2, 3, 4, 5]
+print(list)
+index = int(input("Enter a index"))
+integer = int(input("Enter a integer"))
+list[index] = integer
+print(integer)
