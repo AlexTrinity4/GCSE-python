@@ -1,0 +1,9 @@
+num = []
+for i in range(3):
+    num.append(int(input("Enter a number ")))
+choice = input("Do you want the last number you entered?")
+if "no" in choice:
+    del(num[2
+            ])
+print(num)
+    
