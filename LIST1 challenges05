@@ -1,0 +1,8 @@
+food = []
+for i in range(4):
+    food.append(input("Enter a food"))
+print(food)
+choice = int(input("Which food do you want to delete?"))
+choice = choice - 1
+del(food[choice])
+print(food)
