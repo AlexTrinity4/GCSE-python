@@ -1,0 +1,7 @@
+TV = ["Peppa Pig", "The Simpsons", "Family Guy", "Suits"]
+print(*TV,sep='\n')
+TV2 = input("Enter a TV show")
+place = int(input("What place on the list should it go?"))
+place = place - 1
+TV.insert(place, TV2)
+print(*TV,sep='\n')
