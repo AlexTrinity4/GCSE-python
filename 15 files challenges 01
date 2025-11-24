@@ -1,0 +1,7 @@
+notepad = open("numbers.txt", "w")
+userlines = input("Enter 5 numbers")
+userlines2 = userlines[0:1] + "," + userlines[1:2] + "," + userlines[2:3] + "," + userlines[3:4] + "," + userlines[4:5]
+notepad.write(userlines2)
+notepad.close()
+print("Open the text file")
+
