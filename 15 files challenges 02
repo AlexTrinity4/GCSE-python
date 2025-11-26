@@ -1,0 +1,3 @@
+notepad = open("names.txt", "w")
+notepad.write("Bob\nTimmy\nTim\nJohn\nJohnny")
+notepad.close()
