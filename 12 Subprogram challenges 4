@@ -1,0 +1,21 @@
+def menu():
+    print("1) Creative \n2) Survival \n3) Hardcore \n4) Adventure \n5) Exit")
+    choice = int(input("Enter choice 1-5: "))
+    if choice == 1:
+        print("Creaetive selected")
+    if choice == 2:
+        print("Survival selected")
+    if choice == 3:
+        print("Hardcore selected")
+    if choice == 4:
+        print("Adventure selected")
+    if choice == 5:
+        print("Exiting...")
+    if choice > 5:
+        choice = False
+        print("Invalid choice")
+        while choice == False:
+            menu()
+            
+
+menu()
