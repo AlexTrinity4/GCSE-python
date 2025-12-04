@@ -2,46 +2,52 @@ def times():
     choice2 = int(input("Enter a number"))
     for i in range(0,12):
         print(choice2, "X", i+1, "=", choice2*(i+1))
+        menu()
 
 def adding():
     num1 = int(input("Enter a number"))
     num2 = int(input("Enter a number"))
     num3 = num1 + num2
     print(num3)
+    menu()
 
 def multiply():
     num1 = int(input("Enter a number"))
     num2 = int(input("Enter a number"))
     num3 = num1 * num2
     print(num3)
+    menu()
 
 def subtract():
     num1 = int(input("Enter a number"))
     num2 = int(input("Enter a number"))
     num3 = num1 - num2
     print(num3)
+    menu()  
 
 def division():
     num1 = int(input("Enter a number"))
     num2 = int(input("Enter a number"))
     num3 = num1 / num2
     print(num3)
+    menu()
     
 
-
-choice = int(input("0 to exit\n1 for timetables\n2 for adding\n3 for multiplication\n4 for subtraction\n5 for division"))
-if choice == 0:
-    print("bye")
-if choice == 1:
-    times()
-if choice ==2:
-    adding()
-if choice ==3:
-    multiply()
-if choice ==4:
-    subtract()
-if choice ==5:
-    division()
-    
-    
-    
+def menu():
+    choice = int(input("0 to exit\n1 for timetables\n2 for adding\n3 for multiplication\n4 for subtraction\n5 for division"))
+    if choice == 0:
+        print("bye")
+    if choice == 1:
+        times()
+    if choice ==2:
+        adding()
+    if choice ==3:
+        multiply()
+    if choice ==4:
+        subtract()
+    if choice ==5:
+        division()
+        
+        
+        
+menu()
